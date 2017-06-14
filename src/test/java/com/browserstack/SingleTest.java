@@ -16,5 +16,6 @@ public class SingleTest extends BrowserStackTestNGTest {
         element.submit();
         Thread.sleep(5000);
         Assert.assertEquals("BrowserStack - Google Search", driver.getTitle());
+		//Git Test Changes
     }
 }
