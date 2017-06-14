@@ -1,0 +1,43 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "harshi5",
+  "key": "BBuKK7fyskWoqjEyJz37",
+
+  "capabilities": {
+    "build": "testng-browserstack",
+    "name": "SBNetLoginTestWin7_parallel_13Mar",
+    "browserstack.debug": true,
+    "acceptSslCerts": true
+  },
+
+  "environments": {
+   /* "chrome_Win7": {
+      "browser": "chrome",
+      "browser_version" :"46.0",
+      "os":"Windows",
+      "os_version": "7",
+      "resolution": "1024x768"
+    },*/
+    "firefox_Win7": {
+      "browser": "firefox",
+      "browser_version" :"51.0",
+      "os":"Windows",
+      "os_version": "7",
+      "resolution": "1024x768"
+    },
+    "safari": {
+      "browser": "safari",
+      "browser_version" :"10.0",
+      "os":"OS X",
+      "os_version": "Sierra",
+      "resolution": "1024x768"
+    },
+    "ie_Win7": {
+      "browser": "IE",
+      "browser_version" :"11.0",
+      "os":"Windows",
+      "os_version": "7",
+      "resolution": "1024x768"
+    }
+  }
+}

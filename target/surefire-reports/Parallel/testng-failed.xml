@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Parallel]" parallel="tests">
+  <parameter name="environment" value="ie_Win81"/>
+  <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+  <test name="SBNetLoginTest_Win81Chrome">
+    <parameter name="environment" value="chrome_Win81"/>
+    <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest"/>
+    </classes>
+  </test> <!-- SBNetLoginTest_Win81Chrome -->
+  <test name="SBNetLoginTest_Win81Firefox">
+    <parameter name="environment" value="firefox_Win81"/>
+    <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest"/>
+    </classes>
+  </test> <!-- SBNetLoginTest_Win81Firefox -->
+  <test name="SBNetLoginTest_Win81Safari">
+    <parameter name="environment" value="safari"/>
+    <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest"/>
+    </classes>
+  </test> <!-- SBNetLoginTest_Win81Safari -->
+  <test name="SBNetLoginTest_Win81IE">
+    <parameter name="environment" value="ie_Win81"/>
+    <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest"/>
+    </classes>
+  </test> <!-- SBNetLoginTest_Win81IE -->
+  <test name="SBNetLoginTest_Win81Safari(failed)" parallel="tests">
+    <parameter name="environment" value="safari"/>
+    <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.browserstack.SBNetLoginTest -->
+    </classes>
+  </test> <!-- SBNetLoginTest_Win81Safari(failed) -->
+  <test name="SBNetLoginTest_Win81IE(failed)" parallel="tests">
+    <parameter name="environment" value="ie_Win81"/>
+    <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.browserstack.SBNetLoginTest -->
+    </classes>
+  </test> <!-- SBNetLoginTest_Win81IE(failed) -->
+  <test name="SBNetLoginTest_Win81Firefox(failed)" parallel="tests">
+    <parameter name="environment" value="firefox_Win81"/>
+    <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.browserstack.SBNetLoginTest -->
+    </classes>
+  </test> <!-- SBNetLoginTest_Win81Firefox(failed) -->
+  <test name="SBNetLoginTest_Win81Chrome(failed)" parallel="tests">
+    <parameter name="environment" value="chrome_Win81"/>
+    <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.browserstack.SBNetLoginTest -->
+    </classes>
+  </test> <!-- SBNetLoginTest_Win81Chrome(failed) -->
+</suite> <!-- Failed suite [Parallel] -->

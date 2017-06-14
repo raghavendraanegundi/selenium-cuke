@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Single]">
+  <parameter name="environment" value="chrome_Win7"/>
+  <parameter name="config" value="SBnetSingleTest.conf.json"/>
+  <test name="SingleTest">
+    <parameter name="environment" value="chrome_Win7"/>
+    <parameter name="config" value="SBnetSingleTest.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest"/>
+    </classes>
+  </test> <!-- SingleTest -->
+  <test name="SingleTest(failed)">
+    <parameter name="environment" value="chrome_Win7"/>
+    <parameter name="config" value="SBnetSingleTest.conf.json"/>
+    <classes>
+      <class name="com.browserstack.SBNetLoginTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.browserstack.SBNetLoginTest -->
+    </classes>
+  </test> <!-- SingleTest(failed) -->
+</suite> <!-- Failed suite [Single] -->

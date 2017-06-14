@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel" thread-count="4" parallel="tests">
+
+    <test name="SBNetLoginTest_Win81Chrome">
+        <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+        <parameter name="environment" value="chrome_Win81"/>
+        <classes>
+            <class name="com.browserstack.SBNetLoginTest"/>
+        </classes>
+    </test>
+
+    <test name="SBNetLoginTest_Win81Firefox">
+        <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+        <parameter name="environment" value="firefox_Win81"/>
+        <classes>
+            <class name="com.browserstack.SBNetLoginTest"/>
+        </classes>
+    </test>
+
+    <test name="SBNetLoginTest_Win81Safari">
+        <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+        <parameter name="environment" value="safari"/>
+        <classes>
+            <class name="com.browserstack.SBNetLoginTest"/>
+        </classes>
+    </test>
+
+    <test name="SBNetLoginTest_Win81IE">
+        <parameter name="config" value="SBNetParallel_Win81.conf.json"/>
+        <parameter name="environment" value="ie_Win81"/>
+        <classes>
+            <class name="com.browserstack.SBNetLoginTest"/>
+        </classes>
+    </test>
+
+    
+</suite>
